@@ -1,0 +1,13 @@
+.contenedor {
+    height: 100vh;
+    width: 100%;
+}
+
+.card-principal {
+    transition: .3s;
+}
+
+.card-principal:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
