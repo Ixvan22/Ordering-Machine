@@ -26,9 +26,11 @@ else {
     <?php
     use app\controllers\viewsController;
     use app\controllers\loginController;
+    use app\controllers\userController;
 
     require_once "./app/views/inc/session_start.php";
 
+    $insUsuarios = new userController();
     $insLogin = new loginController();
 
     $viewsController = new viewsController();

@@ -68,6 +68,18 @@ function alertas_ajax(alerta) {
             }
           });
     }
+    else if (alerta.tipo == 'limpiar') {
+      Swal.fire({
+          position: "top-end",
+          icon: alerta.icono,
+          title: alerta.titulo,
+          confirmButtonText: 'Ok'
+      }).then((result) => {
+          if(result.isConfirmed){
+              document.querySelector('.FormularioAjax').reset();
+          }
+      });
+    }
 
 
 }

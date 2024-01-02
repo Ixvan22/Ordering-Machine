@@ -7,14 +7,14 @@ require_once "../views/inc/session_start.php";
 use app\controllers\userController;
 
 
-if (isset($_POST["form_submit"])) {
 
-    $insUsusario = new userController();
+$insUsusario = new userController();
 
+if (isset($_POST["anadir_usuario"])) {
+    echo $insUsusario->anadirUsuarioControlador();
 }
-else {
-    session_destroy();
-    header("Location: ".APP_URL);
+elseif (isset($_POST["eliminar_usuario"])) {
+    echo $insUsusario->eliminarUsuarioControlador();
 }
 
 

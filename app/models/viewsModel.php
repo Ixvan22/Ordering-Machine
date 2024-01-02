@@ -4,7 +4,7 @@ namespace app\models;
 
 class viewsModel {
     protected function obtenerVistasModelo(string $vista):string {
-        $listaBlanca = ["realizarPedido", "procesarPedido", "panel"];
+        $listaBlanca = ["realizarPedido", "procesarPedido", "panel", "addUser", "delUser"];
 
         if (in_array($vista, $listaBlanca)) {
             if (is_file("./app/views/content/".$vista."-view.php")) {
